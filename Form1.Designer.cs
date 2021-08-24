@@ -33,8 +33,8 @@
             this.tip_percentage = new System.Windows.Forms.Label();
             this.number_of_people = new System.Windows.Forms.Label();
             this.bill_amount_input = new System.Windows.Forms.TextBox();
-            this.tip_input = new System.Windows.Forms.NumericUpDown();
             this.total_people_input = new System.Windows.Forms.NumericUpDown();
+            this.tip_input = new System.Windows.Forms.NumericUpDown();
             this.tip_per = new System.Windows.Forms.Label();
             this.per_person = new System.Windows.Forms.Label();
             this.total_per = new System.Windows.Forms.Label();
@@ -42,8 +42,8 @@
             this.tip_amt_per_person = new System.Windows.Forms.Label();
             this.total_amt_per_person = new System.Windows.Forms.Label();
             this.alert = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.tip_input)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.total_people_input)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tip_input)).BeginInit();
             this.SuspendLayout();
             // 
             // bill_label
@@ -87,25 +87,30 @@
             this.bill_amount_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bill_amount_input.TextChanged += new System.EventHandler(this.bill_amount_input_TextChanged);
             // 
-            // tip_input
-            // 
-            this.tip_input.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tip_input.Location = new System.Drawing.Point(51, 259);
-            this.tip_input.Name = "tip_input";
-            this.tip_input.Size = new System.Drawing.Size(332, 43);
-            this.tip_input.TabIndex = 4;
-            this.tip_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tip_input.ValueChanged += new System.EventHandler(this.tip_input_ValueChanged);
-            // 
             // total_people_input
             // 
             this.total_people_input.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.total_people_input.Location = new System.Drawing.Point(51, 369);
+            this.total_people_input.Location = new System.Drawing.Point(51, 379);
             this.total_people_input.Name = "total_people_input";
-            this.total_people_input.Size = new System.Drawing.Size(329, 43);
+            this.total_people_input.Size = new System.Drawing.Size(332, 43);
             this.total_people_input.TabIndex = 4;
             this.total_people_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.total_people_input.ValueChanged += new System.EventHandler(this.total_people_input_ValueChanged);
+            this.total_people_input.ValueChanged += new System.EventHandler(this.tip_input_ValueChanged);
+            // 
+            // tip_input
+            // 
+            this.tip_input.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tip_input.Location = new System.Drawing.Point(51, 271);
+            this.tip_input.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.tip_input.Name = "tip_input";
+            this.tip_input.Size = new System.Drawing.Size(329, 43);
+            this.tip_input.TabIndex = 4;
+            this.tip_input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tip_input.ValueChanged += new System.EventHandler(this.total_people_input_ValueChanged);
             // 
             // tip_per
             // 
@@ -193,8 +198,8 @@
             this.Controls.Add(this.total_per);
             this.Controls.Add(this.per_person);
             this.Controls.Add(this.tip_per);
-            this.Controls.Add(this.total_people_input);
             this.Controls.Add(this.tip_input);
+            this.Controls.Add(this.total_people_input);
             this.Controls.Add(this.bill_amount_input);
             this.Controls.Add(this.number_of_people);
             this.Controls.Add(this.tip_percentage);
@@ -205,8 +210,8 @@
             this.Name = "tip_calculator";
             this.Text = "Tip Calculator";
             this.Load += new System.EventHandler(this.tip_calculator_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tip_input)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.total_people_input)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tip_input)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,8 +223,8 @@
         private System.Windows.Forms.Label tip_percentage;
         private System.Windows.Forms.Label number_of_people;
         private System.Windows.Forms.TextBox bill_amount_input;
-        private System.Windows.Forms.NumericUpDown tip_input;
         private System.Windows.Forms.NumericUpDown total_people_input;
+        private System.Windows.Forms.NumericUpDown tip_input;
         private System.Windows.Forms.Label tip_per;
         private System.Windows.Forms.Label per_person;
         private System.Windows.Forms.Label total_per;
