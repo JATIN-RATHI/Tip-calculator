@@ -1,7 +1,6 @@
 # Tip-calculator
-c# window form application to find tip per person and total amount per persona on Bill Amount
 
-Steps to Run this program in your System.
+🔑Steps to Run this program in your System.
 1. Download the Zip file and Extract it.
 2. Open the extracted file and right click on files with extension .resx.
 3. Click on the properties and tick✔ the unblock option.
